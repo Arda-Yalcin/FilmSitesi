@@ -1,0 +1,52 @@
+@using System.Security.Cryptography
+@{
+    ViewData["Title"]="Create";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+
+@if(!Model.Any()){
+
+<div class="row">
+    <h3>Bu Sayfa Boş İçerik Yüklenmedi</h3>
+</div>
+
+}
+
+
+<form asp-action="Create" asp-controller="Movie" method="post">
+
+    <div class="container">
+        <form>
+            <div class="mb-3 row">
+                <label for="inputName" class="col-4 col-form-label" >Name</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" name="Name" id="inputName" placeholder="Name" />
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="inputName" class="col-4 col-form-label" >Year</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" name="Year" id="inputName" placeholder="Year" />
+                </div>
+            </div>
+
+
+
+            <div class="mb-3 row">
+                <div class="offset-sm-4 col-sm-8">
+                    <button type="submit" class="btn btn-primary">
+                        Action
+                    </button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+
+</form>

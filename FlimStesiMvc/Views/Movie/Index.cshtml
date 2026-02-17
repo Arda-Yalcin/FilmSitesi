@@ -1,0 +1,59 @@
+@model List<Movie>
+
+@{
+    ViewData["Title"] = "Filmler";
+}
+
+<div class="row mb-2">
+    <div class="col-3 row">
+        <a asp-action="Create" asp-controller="Movie" class="btn btn-primary"> film ekle</a>
+    </div>
+</div>
+
+
+
+
+@if(TempData["mesaj"]!=null){
+    <div class="row text-center" style="border-radius: 20px; border:1px solid rgb(0, 68, 255); background-color:rgba(0, 89, 255, 0.315); margin-bottom:20px; "> 
+        <h3 class="alert alert info"> Film Silindi</h3>
+    </div>
+   
+}
+
+
+
+@if(!Model.Any()){
+    <h3 class="alert alert info">Kayıtlı Film Yok</h3>
+}
+
+
+
+<div class="row">
+    @foreach(var item in Model){
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <img src="@item.Photo" alt="">
+                <h3 class="card-title">@item.Name</h3>
+                <p class="card-text">@item.Year</p>
+                <button class="btn btn-danger" onclick="filmSil(@item.Id)">Sil</button>     
+            </div>
+        </div>
+    </div>
+ 
+}
+</div>
+
+@section Scripts{
+    <script>
+        function filmSil(x){
+            var sonuc=confirm("Silmek istediğinize emin misiniz?");
+            if(sonuc){
+                window.location.href="/Movie/Delete/"+x;
+            }
+        }
+
+    </script>
+
+}
