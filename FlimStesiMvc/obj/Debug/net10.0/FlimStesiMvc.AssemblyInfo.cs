@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FlimStesiMvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e32de286aa301b7406759169be1e4fa1a8f3e83")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0febb308608930d0501cdcb949413e687a91166")]
 [assembly: System.Reflection.AssemblyProductAttribute("FlimStesiMvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FlimStesiMvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
