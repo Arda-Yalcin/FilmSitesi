@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kişiselkullanım\\Documents\\GitHub\\FilmSitesi\\FlimStesiMvc\\FlimStesiMvc.csproj": {}
+    "C:\\Users\\kişiselkullanım\\Documents\\ArdaYalcin2620_11A\\FilmSitesi\\FlimStesiMvc\\FlimStesiMvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kişiselkullanım\\Documents\\GitHub\\FilmSitesi\\FlimStesiMvc\\FlimStesiMvc.csproj": {
+    "C:\\Users\\kişiselkullanım\\Documents\\ArdaYalcin2620_11A\\FilmSitesi\\FlimStesiMvc\\FlimStesiMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kişiselkullanım\\Documents\\GitHub\\FilmSitesi\\FlimStesiMvc\\FlimStesiMvc.csproj",
+        "projectUniqueName": "C:\\Users\\kişiselkullanım\\Documents\\ArdaYalcin2620_11A\\FilmSitesi\\FlimStesiMvc\\FlimStesiMvc.csproj",
         "projectName": "FlimStesiMvc",
-        "projectPath": "C:\\Users\\kişiselkullanım\\Documents\\GitHub\\FilmSitesi\\FlimStesiMvc\\FlimStesiMvc.csproj",
+        "projectPath": "C:\\Users\\kişiselkullanım\\Documents\\ArdaYalcin2620_11A\\FilmSitesi\\FlimStesiMvc\\FlimStesiMvc.csproj",
         "packagesPath": "C:\\Users\\kişiselkullanım\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kişiselkullanım\\Documents\\GitHub\\FilmSitesi\\FlimStesiMvc\\obj\\",
+        "outputPath": "C:\\Users\\kişiselkullanım\\Documents\\ArdaYalcin2620_11A\\FilmSitesi\\FlimStesiMvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kişiselkullanım\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,24 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

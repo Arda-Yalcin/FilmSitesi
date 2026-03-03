@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using FlimStesiMvc.Models;
+using FlimStesiMvc.Data;
 
 namespace FlimStesiMvc.Controllers
 {
     public class TheaterController : Controller
     {
         public static List<Theater> theaters= new List<Theater>();
-        public TheaterController()
+        private readonly AppDbContext _appDbContext;
+        public TheaterController(AppDbContext appDbContext)
         {
-            if(!theaters.Any())
-            {
-                theaters.Add(new Theater{Id=1,Name="Tiyatrolar",Year="1999",Photo="/imgTheater/tiyatro1.jpg"});
-                theaters.Add(new Theater{Id=2,Name="Sanat Tiyatrosu",Year="2001",Photo="/imgTheater/tiyatro2.jpg"});
-                theaters.Add(new Theater{Id=3,Name="Eski Dönem Tiyatrosu",Year="2000",Photo="/imgTheater/theater.jpg"});
-            }
+            _appDbContext=appDbContext;
         }
+
+
         public IActionResult Index()
         {
-            return View(theaters);
+            var tarifler=_appDbContext.Theaters.ToList();
+            return View(tarifler);
         }
 
         public IActionResult Create()
